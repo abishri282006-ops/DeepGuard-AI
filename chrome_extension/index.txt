@@ -1,0 +1,9 @@
+🛡️ DeepGuard AI
+AI-Powered Synthetic Media Detector
+📁 Choose an image
+
+
+
+Detect Image
+
+

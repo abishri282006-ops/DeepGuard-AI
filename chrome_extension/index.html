@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DeepGuard AI</title>
+
+<style>
+body {
+    width: 360px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f5f7fb;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #666;
+    margin-top: 0;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 16px;
+    background: white;
+}
+
+#verdict {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#status {
+    font-size: 16px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.upload-box {
+    display: block;
+    padding: 14px;
+    margin-top: 15px;
+    border: 2px dashed #cfd5e2;
+    border-radius: 12px;
+    background: #fafbfe;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#preview {
+    margin-top: 15px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+.confidence-container {
+    width: 100%;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+#confidenceBar {
+    width: 0%;
+    height: 100%;
+    border-radius: 10px;
+    background: #4f46e5;
+    transition: width 0.4s ease;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🛡️ DeepGuard AI</h1>
+
+<p class="subtitle">AI-Powered Synthetic Media Detector</p>
+
+<label for="imageInput" class="upload-box">
+    📁 Choose an image
+</label>
+
+<input type="file" id="imageInput" accept="image/*" hidden>
+
+<br><br>
+
+<img id="preview" width="300" style="display:none;">
+
+<br>
+
+<button id="analyzeButton">Detect Image</button>
+
+    <h2 id="verdict"></h2>
+    <p id="status"></p>
+</div>
+<div id="result">
+    <h2 id="verdict"></h2>
+    <p id="status"></p>
+
+    <div class="confidence-container">
+        <div id="confidenceBar"></div>
+    </div>
+</div>
+<script type="module" src="script.js"></script>
+
+</body>
+</html>
